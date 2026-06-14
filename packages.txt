@@ -6,3 +6,6 @@ libxext6
 libgomp1
 libstdc++6
 libc6
+libatomic1
+libnss3
+libnspr4

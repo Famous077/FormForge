@@ -1,9 +1,16 @@
 import os
-import cv2
+import threading
+
+try:
+    import cv2
+except ImportError as exc:
+    raise ImportError(
+        "OpenCV could not be imported. Install `opencv-python-headless` and ensure the Streamlit Cloud apt packages `libgl1`, `libglib2.0-0`, `libsm6`, `libxrender1`, and `libxext6` are available."
+    ) from exc
+
 import av
 import numpy as np
 import mediapipe as mp
-import threading
 from streamlit_webrtc import VideoProcessorBase
 from mediapipe.tasks import python
 from mediapipe.tasks.python import vision

@@ -9,3 +9,5 @@ libc6
 libatomic1
 libnss3
 libnspr4
+libgles2
+libegl1
